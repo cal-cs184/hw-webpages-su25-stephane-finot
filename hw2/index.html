@@ -133,7 +133,7 @@
 			</div>
 
 		<h3>Part 4: Edge flip</h3>
-		<p>We implemented the edge flip operation by first storing all of the halfedges as local variables so as not to lose them in the process of pointer reassignment. Next, we updated the next pointers of each halfedge to be in accordance with the new triangles formed by the edge flip. Then, we reassigned the faces of two of the halfedges (->next()->next() and ->twin()->next()-next()), as only two halfedges will have their faces changed in a setup with two triangles. Lastly, we reassigned the vertices of the halfedges that we flipped and returned the iterator that we were given as input. </p>
+		<p>We implemented the edge flip operation by first storing all of the halfedges as local variables so as not to lose them in the process of pointer reassignment. Next, we updated the next pointers of each halfedge to be in accordance with the new triangles formed by the edge flip. Then, we reassigned the faces of two of the halfedges, as only two halfedges will have their faces changed in a setup with two triangles. Lastly, we reassigned the vertices of the halfedges that we flipped and returned the iterator that we were given as input. </p>
 
 			<p>One interesting observation is how our teapot is geometrically formed by quads that are split into triangles. If we edge flip on the edge that crosses the quad, the geometry of the shape does not change. However, if we flip an edge that lies between two quads, then our geometry is deformed as seen in the images below.</p>
 			<div style="display: flex; flex-direction: column; align-items: center;">
